@@ -1,12 +1,14 @@
-'use client'
-
 import Link from 'next/link'
-import { CategoryFilterProps } from '@/types'
+import { Category } from '@/types'
+
+interface CategoryFilterProps {
+  categories: Category[]
+  selectedCategory: string | null
+}
 
 export default function CategoryFilter({ 
   categories, 
-  selectedCategory,
-  onCategoryChange 
+  selectedCategory
 }: CategoryFilterProps) {
   return (
     <div className="space-y-2">
@@ -28,7 +30,7 @@ export default function CategoryFilter({
           key={category.id}
           href={`/categories/${category.slug}`}
           className={`block w-full text-left px-3 py-2 rounded-lg transition-colors ${
-            selectedCategory === category.id 
+            selectedCategory === category.slug 
               ? 'bg-primary text-white' 
               : 'text-gray-700 hover:bg-gray-100'
           }`}

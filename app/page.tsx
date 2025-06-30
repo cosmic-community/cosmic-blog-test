@@ -39,7 +39,6 @@ export default async function HomePage() {
                   <CategoryFilter 
                     categories={categories as Category[]}
                     selectedCategory={null}
-                    onCategoryChange={() => {}}
                   />
                 </div>
               </aside>
