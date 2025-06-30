@@ -1,4 +1,3 @@
-// app/categories/[slug]/page.tsx
 import { getAllCategories, getPostsByCategory } from '@/lib/cosmic'
 import { Post, Category } from '@/types'
 import { notFound } from 'next/navigation'
@@ -14,7 +13,7 @@ interface CategoryPageProps {
 export default async function CategoryPage({ params }: CategoryPageProps) {
   const { slug } = await params
   const categories = await getAllCategories()
-  const category = categories.find((cat) => cat.slug === slug)
+  const category = categories.find((cat: Category) => cat.slug === slug)
 
   if (!category) {
     notFound()
