@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+  
+  body {
+    @apply text-gray-900 bg-white;
+  }
+}
+
+@layer components {
+  .container {
+    @apply max-w-6xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  .btn-primary {
+    @apply bg-primary text-primary-foreground px-4 py-2 rounded-lg font-medium hover:bg-primary/90 transition-colors;
+  }
+  
+  .btn-secondary {
+    @apply bg-secondary text-secondary-foreground px-4 py-2 rounded-lg font-medium hover:bg-secondary/80 transition-colors;
+  }
+  
+  .card {
+    @apply bg-white rounded-lg shadow-md overflow-hidden border border-gray-200;
+  }
+  
+  .prose {
+    @apply text-gray-700 leading-relaxed;
+  }
+  
+  .prose h1 {
+    @apply text-3xl font-bold text-gray-900 mb-4;
+  }
+  
+  .prose h2 {
+    @apply text-2xl font-semibold text-gray-900 mb-3 mt-8;
+  }
+  
+  .prose h3 {
+    @apply text-xl font-semibold text-gray-900 mb-2 mt-6;
+  }
+  
+  .prose p {
+    @apply mb-4;
+  }
+  
+  .prose ul {
+    @apply list-disc list-inside mb-4 space-y-1;
+  }
+  
+  .prose ol {
+    @apply list-decimal list-inside mb-4 space-y-1;
+  }
+  
+  .prose li {
+    @apply text-gray-700;
+  }
+  
+  .prose strong {
+    @apply font-semibold text-gray-900;
+  }
+  
+  .prose a {
+    @apply text-primary hover:text-primary/80 underline;
+  }
+  
+  .prose blockquote {
+    @apply border-l-4 border-gray-300 pl-4 italic text-gray-600 my-4;
+  }
+}
