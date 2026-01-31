@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply font-sans antialiased;
+  }
+}
+
+@layer components {
+  .prose-custom {
+    @apply prose prose-lg prose-gray max-w-none;
+  }
+  
+  .prose-custom h1,
+  .prose-custom h2,
+  .prose-custom h3 {
+    @apply font-bold text-gray-900;
+  }
+  
+  .prose-custom a {
+    @apply text-blue-600 hover:text-blue-800;
+  }
+  
+  .prose-custom img {
+    @apply rounded-lg shadow-md;
+  }
+  
+  .prose-custom blockquote {
+    @apply border-l-4 border-blue-500 bg-blue-50 py-2 px-4 italic;
+  }
+}
